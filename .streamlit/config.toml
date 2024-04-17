@@ -1,4 +1,4 @@
 [theme]
-primaryColor=“yellow”
-backgroundColor=“light blue”
-secondaryBackgroundColor=“yellow”
+primaryColor=“rgba(245, 229, 39, 0.87)”
+backgroundColor=“rgba(39, 245, 234, 0.8)”
+secondaryBackgroundColor=“rgba(245, 229, 39, 0.87)”
