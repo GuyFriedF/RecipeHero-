@@ -171,7 +171,7 @@ st.markdown("<h1 style='text-align: center; color: black;'>RecipeHero!</h1>", un
 
 # Dropdown menu
 with st.container():
-  st.subheader("Ingredients:")
+  st.markdown("<h2 style='text-align: center; color: black;'>Ingredients:</h2>", unsafe_allow_html=True)
   st.session_state.currentdf = df
   dropdown_value = st.multiselect("Please type in your ingredients:", allingred, on_change=df_update, args=[df])
   st.session_state.currentdf = match_ingredients(df, dropdown_value)
@@ -185,7 +185,7 @@ stylist=['italian', 'french',
   'greek', 'spanish', 'soup','breakfast','salad', 
   'dessert','bread','drinks','dips & dressing']
 with st.container():
-  st.subheader("Style and Dietary-restrictions:")
+  st.markdown("<h2 style='text-align: center; color: black;'>Style and Dietary-restrictions:</h2>", unsafe_allow_html=True)
   params = st.multiselect("Please choose which style of recipes you would like:", ['italian', 'french',
   'mexican','asian', 'american', 'oriental',
   'greek', 'spanish', 'soup','breakfast','salad', 
@@ -216,7 +216,7 @@ with st.container():
   df2=df1
 
 with st.container():
-  st.subheader("Number of ingredients, steps and time:")
+  st.markdown("<h2 style='text-align: center; color: black;'>Number of ingredients, steps and time:</h2>", unsafe_allow_html=True)
   col1, col2, col3 = st.columns(3)
   with col1:
     try:
@@ -264,7 +264,7 @@ with st.container():
 
 
 with st.container():
-  st.subheader("Recipes results:")
+  st.markdown("<h2 style='text-align: center; color: black;'>Recipes Results:</h2>", unsafe_allow_html=True)
   number = st.number_input("How many recipes should be shown",min_value=1)
 
   button = st.button("Show results")
