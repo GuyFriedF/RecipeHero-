@@ -7,6 +7,20 @@ url = "https://drive.google.com/file/d/1OMZf5eUXRiagsSVQ_Q-ETt8_m3c33K-p/view?us
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 df = pd.read_csv(path,engine='python', on_bad_lines='skip')
 
+st.set_page_config(layout="wide")
+
+st.markdown("""
+<style>
+.big-font {
+    font-size:200px !important;
+}
+.stMultiSelect > label {
+            font-size:200%; 
+            font-weight:bold; 
+            color:black;
+</style>
+""", unsafe_allow_html=True)
+
 
 
 
@@ -151,7 +165,8 @@ def match_time(df, values):
 
 
 # Title
-st.title("RecipeHero!")
+#st.title("RecipeHero!")
+st.markdown("<h1 style='text-align: center; color: black;'>RecipeHero!</h1>", unsafe_allow_html=True)
 
 # Dropdown menu
 with st.container():
