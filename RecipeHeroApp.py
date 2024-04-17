@@ -12,10 +12,10 @@ st.set_page_config(layout="wide")
 st.markdown("""
 <style>
 .big-font {
-    font-size:200px !important;
+    font-size:500px !important;
 }
 .stMultiSelect > label {
-            font-size:200%; 
+            font-size:400%; 
             font-weight:bold; 
             color:black;
 </style>
