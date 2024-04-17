@@ -173,7 +173,7 @@ st.markdown("<h1 style='text-align: center; color: black;'>RecipeHero!</h1>", un
 with st.container():
   st.markdown("<h2 style='text-align: center; color: black;'>Ingredients:</h2>", unsafe_allow_html=True)
   st.session_state.currentdf = df
-  st.markdown("<h3 style='text-align: center; color: black;'>Please type in your ingredients:</h3>", unsafe_allow_html=True)
+  st.markdown("<h5 style='text-align: center; color: black;'>Please type in your ingredients:</h5>", unsafe_allow_html=True)
   dropdown_value = st.multiselect("", allingred, on_change=df_update, args=[df])
   st.session_state.currentdf = match_ingredients(df, dropdown_value)
   df2 =df1
