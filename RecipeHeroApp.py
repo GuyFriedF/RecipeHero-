@@ -1,7 +1,7 @@
-import pandas as pd
-import csv
-import numpy as np
-import streamlit as st
+#import pandas as pd
+#import csv
+#import numpy as np
+#import streamlit as st
 
 url = "https://drive.google.com/file/d/1OMZf5eUXRiagsSVQ_Q-ETt8_m3c33K-p/view?usp=sharing"
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
