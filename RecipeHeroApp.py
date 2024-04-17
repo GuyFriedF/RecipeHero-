@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 st.markdown("""
 <style>
 .big-font {
-    font-size:800px !important;
+    font-size:800% !important;
 }
 .stMultiSelect > label {
             font-size:400%; 
@@ -171,9 +171,9 @@ st.markdown("<h1 style='text-align: center; color: black;'>RecipeHero!</h1>", un
 
 # Dropdown menu
 with st.container():
-  st.markdown("<h2 style='text-align: center; color: black;'>Ingredients:</h2>", unsafe_allow_html=True)
+  st.markdown("<h2 style='text-align: center; color: black;'>Ingredients</h2>", unsafe_allow_html=True)
   st.session_state.currentdf = df
-  st.markdown("<h5 style='text-align: center; color: black;'>Please type in your ingredients:</h5>", unsafe_allow_html=True)
+  st.markdown("<h7 style='text-align: center; color: black;'>Please type in your ingredients:</h7>", unsafe_allow_html=True)
   dropdown_value = st.multiselect("", allingred, on_change=df_update, args=[df])
   st.session_state.currentdf = match_ingredients(df, dropdown_value)
   df2 =df1
@@ -186,12 +186,14 @@ stylist=['italian', 'french',
   'greek', 'spanish', 'soup','breakfast','salad', 
   'dessert','bread','drinks','dips & dressing']
 with st.container():
-  st.markdown("<h2 style='text-align: center; color: black;'>Style and Dietary-restrictions:</h2>", unsafe_allow_html=True)
-  params = st.multiselect("Please choose which style of recipes you would like:", ['italian', 'french',
+  st.markdown("<h2 style='text-align: center; color: black;'>Style and Dietary-restrictions</h2>", unsafe_allow_html=True)
+  st.markdown("<h7 style='text-align: center; color: black;'>Please choose which style of recipes you would like:</h7>", unsafe_allow_html=True)
+  params = st.multiselect("", ['italian', 'french',
   'mexican','asian', 'american', 'oriental',
   'greek', 'spanish', 'soup','breakfast','salad', 
   'dessert','bread','drinks','dips & dressing','any'],default=['any'], on_change=df_update, args=[st.session_state.currentdf])
-  restrict = st.multiselect("Do you have any dietary restrictions?", ['none','vegan','vegeterian', 'gluten-free'], default=['none'], on_change=df_update, args=[st.session_state.currentdf])
+  st.markdown("<h7 style='text-align: center; color: black;'>Do you have any dietary restrictions?</h7>", unsafe_allow_html=True)
+  restrict = st.multiselect("", ['none','vegan','vegeterian', 'gluten-free'], default=['none'], on_change=df_update, args=[st.session_state.currentdf])
   if 'gluten-free' in restrict:
     if params==['any']:
       try:
@@ -266,7 +268,8 @@ with st.container():
 
 with st.container():
   st.markdown("<h2 style='text-align: center; color: black;'>Recipes Results:</h2>", unsafe_allow_html=True)
-  number = st.number_input("How many recipes should be shown",min_value=1)
+  st.markdown("<h7 style='text-align: center; color: black;'>How many recipes should be shown:</h7>", unsafe_allow_html=True) 
+  number = st.number_input(min_value=1)
 
   button = st.button("Show results")
   if button:
