@@ -127,8 +127,7 @@ def match_time(df, values):
 
 # Title
 st.title("RecipeHero!")
-#st.title("RecipeHero!")
-st.markdown("<h1 style='text-align: center; color: black;'>RecipeHero!</h1>", unsafe_allow_html=True)
+
 
 # Dropdown menu
 with st.container():
