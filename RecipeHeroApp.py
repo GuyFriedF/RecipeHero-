@@ -9,23 +9,6 @@ df = pd.read_csv(path,engine='python', on_bad_lines='skip')
 
 
 
-page_bg_img = f"""
-<style>
-[data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://images.squarespace-cdn.com/content/v1/602608dc520eeb43c0ed9de9/1613359461959-D9ML3RM9OKPJ0PT1SJ5H/fruitveg.jpeg");
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: local;
-}}
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
-</style>
-"""
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 
 #Creating lists in the dataframe for better matching:
